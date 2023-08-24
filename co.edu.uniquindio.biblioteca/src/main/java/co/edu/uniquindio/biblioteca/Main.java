@@ -18,7 +18,6 @@ public abstract class Main {
         libro11.setNumeropaginas(344);
         libro11.setAutor("John Gray");
 
-
         libro libro12 = new libro();
         libro12.setTitulo("La oportunista");
         libro12.setGenero("Novela rosa, ficcion");
@@ -87,6 +86,91 @@ public abstract class Main {
 
         System.out.println("La cantidad de vocales es:" + calcularVocal);
         System.out.println("La cantidad de consonantes es:" + calcularConsonante);
+
+        //Cambio titulo
+        String tituloInicial = "Calculo integral";
+        String tituloFinal = "Calculo integral y diferencial";
+
+        if(libro11.getTitulo().equalsIgnoreCase(tituloInicial)){
+            libro11.setTitulo(tituloFinal);
+            System.out.println("Titulo:" +libro11.getTitulo());
+        }
+
+        if(libro12.getTitulo().equalsIgnoreCase(tituloInicial)){
+            libro12.setTitulo(tituloFinal);
+            System.out.println("Titulo:" +libro12.getTitulo());
+        }
+
+        if(libro13.getTitulo().equalsIgnoreCase(tituloInicial)){
+            libro13.setTitulo(tituloFinal);
+            System.out.println("Tutulo:" +libro13.getTitulo());
+        }
+
+        if(libro14.getTitulo().equalsIgnoreCase(tituloInicial)){
+            libro14.setTitulo(tituloFinal);
+            System.out.println("Titulo:" +libro14.getTitulo());
+        }
+
+        if(libro15.getTitulo().equalsIgnoreCase(tituloInicial)){
+            libro15.setTitulo(tituloFinal);
+            System.out.println("Titulo:" +libro15.getTitulo());
+        }
+
+        // Contador de genero
+        int calcularGeneroPsicologia = 0;
+
+        if(libro11.getGenero().equalsIgnoreCase("Psicologia")){
+            calcularGeneroPsicologia += 1;
+        }
+
+        if(libro12.getGenero().equalsIgnoreCase("Psicologia")){
+            calcularGeneroPsicologia += 1;
+        }
+
+        if(libro13.getGenero().equalsIgnoreCase("Psicologia")){
+            calcularGeneroPsicologia += 1;
+        }
+
+        if(libro14.getGenero().equalsIgnoreCase("Psicologia")){
+            calcularGeneroPsicologia += 1;
+        }
+
+        if(libro15.getGenero().equalsIgnoreCase("Psicologia")){
+            calcularGeneroPsicologia += 1;
+        }
+
+        System.out.println("Los libros que tienen por genero psicologia son:" +calcularGeneroPsicologia);
+
+        // ¿Tiene mas de 200 paginas?
+        if(libro11.getNumeropaginas() >= 200){
+            System.out.println("El libro tiene mas de 200 paginas");
+        } else {
+            System.out.println("El libro tiene menos de 200 paginas");
+        }
+
+        if(libro12.getNumeropaginas() >= 200) {
+            System.out.println("El libro tiene mas de 200 paginas");
+        } else {
+            System.out.println("El libro tiene menos de 200 paginas");
+        }
+
+        if(libro13.getNumeropaginas() >= 200) {
+            System.out.println("El libro tiene mas de 200 paginas");
+        } else {
+            System.out.println("El libro tiene menos de 200 paginas");
+        }
+
+        if(libro14.getNumeropaginas() >= 200) {
+            System.out.println("El libro tiene mas de 200 paginas");
+        } else {
+            System.out.println("El libro tiene menos de 200 paginas");
+        }
+
+        if(libro15.getNumeropaginas() >= 200) {
+            System.out.println("El libro tiene mas de 200 paginas");
+        } else {
+            System.out.println("El libro tiene menos de 200 paginas");
+        }
     }
     private static boolean contarVocal(char caracter){
         if (caracter == 'a' || caracter == 'e' || caracter == 'i' || caracter == 'o' || caracter == 'u' || caracter == 'A' || caracter == 'E' || caracter == 'I' || caracter == 'O' || caracter == 'U') {

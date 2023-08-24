@@ -3,6 +3,9 @@ package co.edu.uniquindio.biblioteca;
 public class libro {
     private String titulo;
     private String genero;
+    private int aniopublicacion;
+    private String autor;
+    private int numeropaginas;
 
     public String getTitulo() {
         return titulo;
@@ -43,10 +46,6 @@ public class libro {
     public void setNumeropaginas(int numeropaginas) {
         this.numeropaginas = numeropaginas;
     }
-
-    private int aniopublicacion;
-    private String autor;
-    private int numeropaginas;
 
     public String getEditorial() {
         return Editorial;
