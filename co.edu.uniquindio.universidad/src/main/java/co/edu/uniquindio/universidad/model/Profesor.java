@@ -16,6 +16,13 @@ public class Profesor {
         this.correo = correo;
     }
 
+    public double calcularPromedioCurso(double notaEstudiante1, double notaEstudiante2, double notaEstudiante3) {
+        double promedioCurso = 0.0;
+        promedioCurso = (notaEstudiante1 + notaEstudiante2 + notaEstudiante3) / 3;
+
+        return promedioCurso;
+    }
+
     public String getNombre() {
         return nombre;
     }

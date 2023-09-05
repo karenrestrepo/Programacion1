@@ -1,6 +1,7 @@
 package co.edu.uniquindio.universidad;
 import co.edu.uniquindio.universidad.model.Estudiante;
 import co.edu.uniquindio.universidad.model.Profesor;
+import co.edu.uniquindio.universidad.model.Curso;
 
 public class Main {
     public static void main(String[] args) {
@@ -8,6 +9,11 @@ public class Main {
         Estudiante estudiante2 = crearEstudiante("Maria", 15, "pepita@mail.com", 1, 2, 2.5, 4.5);
         Estudiante estudiante3 = crearEstudiante("Pepe", 20, "pepe@mail.com", 4, 4, 2.5, 4.5);
         Profesor profesor = crearProfesor("Jhon", 34, "jhon@uniquindio.ecu.co");
+        Curso curso = new Curso("Programación 1", 2, "2N", 3, "Nocturna");
+        curso.setEstudiante1(estudiante1);
+        curso.setEstudiante2(estudiante2);
+        curso.setEstudiante3(estudiante3);
+        curso.setProfesor(profesor);
     }
 
     private static Estudiante crearEstudiante(String nombre, int edad, String correo, int semestre, double nota1, double nota2, double nota3){
