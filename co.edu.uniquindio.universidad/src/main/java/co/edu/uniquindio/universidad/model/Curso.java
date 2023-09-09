@@ -6,7 +6,6 @@ public class Curso{
     private String grupo;
     private int creditos;
     private String jornada;
-
     private Estudiante estudiante1;
     private Estudiante estudiante2;
     private Estudiante estudiante3;
@@ -90,5 +89,29 @@ public class Curso{
 
     public void setProfesor(Profesor profesor) {
         this.profesor = profesor;
+    }
+
+    public void mostrarInformacionEstudiantes() {
+        String informacionEstudiante1 = getEstudiante1().obtenerInformacion();
+        String informacionEstudiante2 = getEstudiante2().obtenerInformacion();
+        String informacionEstudiante3 = getEstudiante3().obtenerInformacion();
+        System.out.println("Informacion del estudiante 1: "+ informacionEstudiante1);
+        System.out.println("Informacion del estudiante 2: "+ informacionEstudiante2);
+        System.out.println("Informacion del estudiante 3: "+ informacionEstudiante3);
+
+    }
+
+    public double obtenerPromedioCurso() {
+        double promedioEstudiante1 = 0.0;
+        double promedioEstudiante2 = 0.0;
+        double promedioEstudiante3 = 0.0;
+        double promedioCurso = 0.0;
+        promedioEstudiante1 = getEstudiante1().calcularPromedio();
+        promedioEstudiante2 = getEstudiante2().calcularPromedio();
+        promedioEstudiante3 = getEstudiante3().calcularPromedio();
+        promedioCurso = (promedioEstudiante1 + promedioEstudiante2 + promedioEstudiante3) / 3;
+
+        return promedioCurso;
+
     }
 }

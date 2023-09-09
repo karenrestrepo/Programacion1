@@ -5,6 +5,17 @@ import co.edu.uniquindio.universidad.model.Curso;
 
 public class Main {
     public static void main(String[] args) {
+        Curso curso = inicializaDatosPrueba();
+
+        /*Solicita datos de cada estudiante*/
+        curso.mostrarInformacionEstudiantes();
+
+        /*Solicitar promedio del curso*/
+        double promedioCurso = curso.obtenerPromedioCurso();
+        System.out.println("El promedio del curso es: "+ promedioCurso);
+    }
+
+    private static Curso inicializaDatosPrueba() {
         Estudiante estudiante1 = crearEstudiante("Jose", 17, "juan@mail.com", 3, 3, 3.5, 4.5);
         Estudiante estudiante2 = crearEstudiante("Maria", 15, "pepita@mail.com", 1, 2, 2.5, 4.5);
         Estudiante estudiante3 = crearEstudiante("Pepe", 20, "pepe@mail.com", 4, 4, 2.5, 4.5);
@@ -14,9 +25,11 @@ public class Main {
         curso.setEstudiante2(estudiante2);
         curso.setEstudiante3(estudiante3);
         curso.setProfesor(profesor);
+
+        return curso;
     }
 
-    private static Estudiante crearEstudiante(String nombre, int edad, String correo, int semestre, double nota1, double nota2, double nota3){
+    private static Estudiante crearEstudiante(String nombre, int edad, String correo, int semestre, double nota1, double nota2, double nota3) {
         Estudiante estudiante = new Estudiante();
         estudiante.setNombre(nombre);
         estudiante.setEdad(edad);
@@ -37,4 +50,5 @@ public class Main {
 
         return profesor;
     }
+
 }
