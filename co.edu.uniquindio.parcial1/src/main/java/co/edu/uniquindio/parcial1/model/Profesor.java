@@ -1,27 +1,19 @@
-package co.edu.uniquindio.universidad.model;
+package co.edu.uniquindio.parcial1.model;
 
 public class Profesor {
     private String nombre;
     private int edad;
     private String correo;
 
-    /* Constructor*/
-    public Profesor() {
+    /*Constructor*/
 
-    }
-    /* Constructor con parámetros*/
     public Profesor(String nombre, int edad, String correo) {
         this.nombre = nombre;
         this.edad = edad;
         this.correo = correo;
     }
 
-    public double calcularPromedioCurso(double notaEstudiante1, double notaEstudiante2, double notaEstudiante3) {
-        double promedioCurso = 0.0;
-        promedioCurso = (notaEstudiante1 + notaEstudiante2 + notaEstudiante3) / 3;
-
-        return promedioCurso;
-    }
+    /*Getters and Setters*/
 
     public String getNombre() {
         return nombre;
@@ -46,6 +38,4 @@ public class Profesor {
     public void setCorreo(String correo) {
         this.correo = correo;
     }
-
-
 }
