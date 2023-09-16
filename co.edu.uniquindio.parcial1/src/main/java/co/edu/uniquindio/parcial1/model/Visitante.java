@@ -11,6 +11,9 @@ public class Visitante {
 
     /*Constructor*/
 
+    public Visitante(){
+
+    }
     public Visitante(String nombres, String apellidos, int edad, int numeroIdentificacion, String tipovisitante, String sexo, int peso) {
         this.nombres = nombres;
         this.apellidos = apellidos;
